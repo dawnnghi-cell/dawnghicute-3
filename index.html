@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5eee5">
+  <meta name="description" content="My Little Diary — góc nhỏ coquette của Dawn Nghi.">
+  <title>My Little Diary ♡ Dawn Nghi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f5eee5;
+      --paper: #fffaf4;
+      --pink: #d8a6ad;
+      --dusty: #b9828b;
+      --nude: #ead0c9;
+      --brown: #715b55;
+      --ink: #594943;
+      --muted: #987f77;
+      --line: #e8d5ce;
+      --sage: #c9d0bd;
+      --shadow: 0 12px 36px rgba(117, 82, 77, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background-color: var(--cream);
+      background-image: radial-gradient(rgba(185,130,139,.13) .7px, transparent .7px);
+      background-size: 11px 11px; font-family: "DM Sans", sans-serif; line-height: 1.7;
+    }
+    a { color: inherit; }
+    .page { width: min(1060px, calc(100% - 30px)); margin: 24px auto 40px; }
+    .top-note { text-align: center; color: var(--muted); font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 12px; }
+    .frame { border: 1px solid #d9b9b6; outline: 1px solid rgba(217,185,182,.65); outline-offset: 5px; background: rgba(255,250,244,.82); box-shadow: var(--shadow); position: relative; }
+    .lace { height: 12px; background: radial-gradient(circle at 6px 0, transparent 6px, var(--nude) 6.5px, var(--nude) 7.5px, transparent 8px) 0 0 / 14px 12px repeat-x; opacity: .9; }
+    header { text-align: center; padding: 35px 20px 25px; position: relative; overflow: hidden; }
+    .tiny { color: var(--dusty); letter-spacing: .24em; font-size: .72rem; text-transform: uppercase; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; }
+    h1 { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.05; margin: 12px 0 8px; color: #a86f7a; font-style: italic; }
+    .subtitle { margin: 0; color: var(--muted); font-family: "Playfair Display", serif; font-style: italic; font-size: 1.1rem; }
+    .bow { color: var(--dusty); font-size: 1.6rem; letter-spacing: .3rem; }
+    .corner { position: absolute; color: #d7a7ad; opacity: .65; font-size: 2rem; }
+    .corner.left { left: 18px; top: 18px; transform: rotate(-15deg); }
+    .corner.right { right: 18px; top: 18px; transform: rotate(15deg); }
+    nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px 24px; padding: 12px 16px; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); font-size: .82rem; }
+    nav a { text-decoration: none; color: var(--muted); }
+    nav a:hover { color: var(--dusty); }
+    main { padding: clamp(18px, 4vw, 38px); }
+    .hero { display: grid; grid-template-columns: .8fr 1.2fr; gap: 26px; align-items: center; }
+    .portrait { min-height: 270px; border: 1px solid var(--line); background: linear-gradient(145deg, #f4e2df, #f8efe6 52%, #e6d8cb); display: flex; align-items: center; justify-content: center; position: relative; text-align: center; padding: 25px; overflow: hidden; }
+    .portrait::before, .portrait::after { content: "୨୧"; position: absolute; font-size: 3rem; color: #bd8992; opacity: .7; }
+    .portrait::before { top: 8px; left: 12px; transform: rotate(-15deg); }
+    .portrait::after { bottom: 8px; right: 12px; transform: rotate(15deg); }
+    .portrait-inner { border: 1px dashed rgba(169,111,122,.5); padding: 22px 12px; width: 100%; }
+    .portrait .initial { font-family: "Playfair Display", serif; font-size: 4rem; line-height: 1; color: #b9828b; font-style: italic; }
+    .portrait p { color: var(--muted); font-size: .82rem; margin-bottom: 0; }
+    .intro h2 { color: var(--dusty); font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 7px 0 12px; }
+    .intro p { margin: 0 0 12px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .pill { border: 1px solid #e1c3c2; background: #fff8f3; border-radius: 30px; padding: 5px 12px; color: #956c71; font-size: .78rem; }
+    .section { margin-top: 38px; }
+    .section-heading { text-align: center; margin-bottom: 20px; }
+    .section-heading .tiny { font-size: .68rem; }
+    .section-heading h2 { margin: 2px 0 0; color: var(--dusty); font-size: clamp(1.7rem, 4vw, 2.25rem); }
+    .section-heading .ornament { color: #c9939a; letter-spacing: .3em; font-size: .9rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card { background: var(--paper); border: 1px solid var(--line); padding: 19px 17px; position: relative; }
+    .card::before { content: "♡"; position: absolute; top: 8px; right: 12px; color: #d7a7ad; font-size: 1rem; }
+    .card .icon { font-size: 1.35rem; color: var(--dusty); }
+    .card h3 { font-size: 1.25rem; color: #a7757d; margin: 7px 0 6px; }
+    .card p { margin: 0; font-size: .9rem; color: #806d65; }
+    .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .fact { display: flex; gap: 12px; align-items: flex-start; padding: 13px 15px; border-bottom: 1px dashed var(--line); }
+    .fact .symbol { color: var(--dusty); font-size: 1.1rem; }
+    .fact strong { display: block; color: #9f7077; font-size: .82rem; font-weight: 600; }
+    .fact span:last-child { font-size: .92rem; }
+    .dream { text-align: center; padding: 25px 18px; background: linear-gradient(130deg, #f4e2df, #fbf2e9); border: 1px dashed #d8b0b4; }
+    .dream h2 { margin: 5px 0; color: #a86f7a; font-size: 1.8rem; }
+    .dream p { margin: 0; color: #866b65; }
+    .quote { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.1rem; text-align: center; color: #a5787e; margin: 24px 0 0; }
+    .form-wrap { background: #fffaf5; border: 1px solid var(--line); padding: 10px; }
+    .form-wrap iframe { display: block; width: 100%; min-height: 900px; border: 0; background: transparent; }
+    .form-help { text-align: center; color: var(--muted); font-size: .82rem; margin: 12px 0 0; }
+    .form-help a { color: #a66f79; }
+    footer { padding: 24px 15px 30px; text-align: center; color: var(--muted); font-size: .8rem; }
+    footer .bow { font-size: 1.3rem; }
+    .back-top { display: inline-block; margin-top: 8px; text-decoration: none; border-bottom: 1px solid #d7a7ad; }
+    @media (max-width: 700px) {
+      .page { width: min(100% - 22px, 600px); margin-top: 16px; }
+      .hero { grid-template-columns: 1fr; }
+      .portrait { min-height: 220px; }
+      .grid { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: 1fr; }
+      nav { gap: 7px 15px; }
+      header { padding-top: 42px; }
+      .form-wrap { padding: 3px; }
+      .form-wrap iframe { min-height: 1000px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="page" id="top">
+    <div class="top-note">a little corner of my world · est. with love</div>
+    <div class="frame">
+      <div class="lace"></div>
+      <header>
+        <span class="corner left">୨୧</span><span class="corner right">♡</span>
+        <div class="bow">୨୧ &nbsp; ♡ &nbsp; ୨୧</div>
+        <div class="tiny">welcome to my little world</div>
+        <h1>My Little Diary</h1>
+        <p class="subtitle">nhật ký nhỏ xinh của Dawn Nghi</p>
+        <div class="bow">⋆｡°✩</div>
+      </header>
+      <nav aria-label="Điều hướng chính">
+        <a href="#about">Về tui</a><a href="#little-things">Những điều nhỏ xinh</a><a href="#favorites">Sở thích</a><a href="#dream">Ước mơ</a><a href="#guestbook">Gửi lời nhắn</a>
+      </nav>
+      <main>
+        <section class="hero" id="about">
+          <div class="portrait" aria-label="Khung ảnh đại diện đang chờ ảnh">
+            <div class="portrait-inner">
+              <div class="initial">D ♡ N</div>
+              <div class="bow">୨୧</div>
+              <strong>ảnh của tui sẽ ở đây</strong>
+              <p>chưa chọn ảnh đại diện — hẹn gặp nàng thơ sau nha!</p>
+            </div>
+          </div>
+          <div class="intro">
+            <div class="tiny">♡ hello, lovely ♡</div>
+            <h2>Hii, tui là Dawn Nghi!</h2>
+            <p>Chào cậu ghé thăm góc nhỏ của tui nhaa. Tui đáng yêu, dễ thương và thích lưu giữ những điều xinh xắn trong cuộc sống. Đây là chiếc nhật ký màu kem vintage, có một chút hồng phấn cũ, nơ và ren — đúng gu dịu dàng của tui.</p>
+            <p>Tui thích xem Netflix, nghe nhạc buồn và mê tiếng Anh (trừ phần 12 thì… hihi). Cảm ơn cậu đã ghé qua My Little Diary nhé ♡</p>
+            <div class="pill-row"><span class="pill">soft coquette</span><span class="pill">pink mood</span><span class="pill">music lover</span><span class="pill">♡ daydreamer</span></div>
+          </div>
+        </section>
+
+        <section class="section" id="little-things">
+          <div class="section-heading"><div class="tiny">the girl behind the diary</div><h2>Đôi điều về tui</h2><div class="ornament">୨୧ ── ♡ ── ୨୧</div></div>
+          <div class="facts">
+            <div class="fact"><span class="symbol">♡</span><div><strong>Tên gọi</strong><span>Dawn Nghi</span></div></div>
+            <div class="fact"><span class="symbol">✧</span><div><strong>Tuổi</strong><span>15 tuổi</span></div></div>
+            <div class="fact"><span class="symbol">୨୧</span><div><strong>Sinh nhật</strong><span>07/10/2011</span></div></div>
+            <div class="fact"><span class="symbol">☁</span><div><strong>Tính cách</strong><span>Dịu dàng, cute, đáng yêu, thân thiện</span></div></div>
+            <div class="fact"><span class="symbol">♡</span><div><strong>Gu màu sắc</strong><span>Trắng, xanh pastel, hồng pastel, vàng pastel</span></div></div>
+            <div class="fact"><span class="symbol">✿</span><div><strong>Vibe của tui</strong><span>Nơ, ren, ruy băng và trái tim nhỏ</span></div></div>
+          </div>
+        </section>
+
+        <section class="section" id="favorites">
+          <div class="section-heading"><div class="tiny">things that make me smile</div><h2>Những điều tui mê</h2><div class="ornament">୨୧ ── ♡ ── ୨୧</div></div>
+          <div class="grid">
+            <article class="card"><div class="icon">🎀</div><h3>Pink makeup</h3><p>Tui thích make tone hồng — nhẹ nhàng, xinh xắn và có chút nàng thơ.</p></article>
+            <article class="card"><div class="icon">♫</div><h3>Music on repeat</h3><p>Nghe nhạc buồn và nhạc của Sabrina Carpenter, để mood trôi theo từng giai điệu.</p></article>
+            <article class="card"><div class="icon">✧</div><h3>Little obsessions</h3><p>Xem Netflix, thích tiếng Anh và mê lens 14.5. Mỗi thứ một chút, thành gu riêng của tui.</p></article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading"><div class="tiny">my favorite palette</div><h2>Bảng màu của tui</h2><div class="ornament">♡ · ♡ · ♡</div></div>
+          <div class="grid">
+            <div class="card"><div class="icon">✧</div><h3>Trắng kem</h3><p>Mềm mại, vintage và thật thanh lịch.</p></div>
+            <div class="card"><div class="icon">♡</div><h3>Hồng phấn</h3><p>Màu hồng cũ dịu dàng, không chói mắt.</p></div>
+            <div class="card"><div class="icon">୨୧</div><h3>Pastel nhẹ</h3><p>Xanh và vàng pastel như một buổi chiều yên bình.</p></div>
+          </div>
+        </section>
+
+        <section class="section" id="dream">
+          <div class="dream">
+            <div class="bow">୨୧ &nbsp; ♡ &nbsp; ୨୧</div>
+            <div class="tiny">one day, hopefully</div>
+            <h2>Ước mơ của tui</h2>
+            <p>Tui mong sau này sẽ trở thành <strong>giáo viên</strong> — được chia sẻ kiến thức, truyền cảm hứng và giúp mọi người yêu việc học hơn.</p>
+            <p class="quote">“little by little, lovely things grow.”</p>
+          </div>
+        </section>
+
+        <section class="section" id="guestbook">
+          <div class="section-heading"><div class="tiny">leave a little note</div><h2>Gửi tui một lời nhắn ♡</h2><div class="ornament">୨୧ ── ♡ ── ୨୧</div></div>
+          <p style="text-align:center;max-width:620px;margin:0 auto 18px;color:#806d65">Cậu có thể để lại tên, tuổi, sở thích và lời nhắn cho tui qua chiếc form nhỏ này nè. Tui sẽ rất vui khi đọc được lời nhắn của cậu!</p>
+          <div class="form-wrap">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSeWVmwBHuZHbMkNv4pBHOYsWk22fvFUJZ4u-U3AB8sf2o6EBw/viewform?embedded=true"
+              title="Google Form gửi lời nhắn cho Dawn Nghi"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">Đang tải biểu mẫu…</iframe>
+          </div>
+          <p class="form-help">Nếu form không hiển thị, <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWVmwBHuZHbMkNv4pBHOYsWk22fvFUJZ4u-U3AB8sf2o6EBw/viewform?usp=header" target="_blank" rel="noopener noreferrer">bấm vào đây để mở form riêng</a> nha ♡</p>
+        </section>
+      </main>
+      <div class="lace"></div>
+      <footer>
+        <div class="bow">୨୧ ♡ ୨୧</div>
+        made with love by Dawn Nghi · My Little Diary<br>
+        <a class="back-top" href="#top">trở về đầu trang ↑</a>
+      </footer>
+    </div>
+    <p class="top-note" style="margin-top:17px;letter-spacing:.08em;text-transform:none">a soft little diary, wrapped in ribbons & dreams ♡</p>
+  </div>
+</body>
+</html>
